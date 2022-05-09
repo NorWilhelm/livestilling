@@ -1,0 +1,24 @@
+// Custom Bootstrap variable overrides go first
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 720px,
+  lg: 992px,
+  xl: 1300px
+);
+$input-btn-focus-width: 0px;
+//colors
+$primary: #3361FF;
+$secondary: #223B88;
+$link-primary: #223B88;
+
+// Then include the following
+
+// And define any of your custom or additional CSS/SCSS here,
+// or via an @import
+.btn{
+    border: none;
+}
+$body-bg: #F8F9FA;
+
+@import 'bootstrap/scss/bootstrap.scss';

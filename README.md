@@ -1,4 +1,4 @@
-# livestilling
+# likestilling
 
 ## Project setup
 ```
