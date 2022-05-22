@@ -10,35 +10,28 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Pågående Kamper</h4>
-                        <div>
+                        <div v-for="kamp in kamperPaagaaende" :key="kamp.kampId">
                             <div class="row" style="margin-bottom: 10px;">
-                                <div class="col text-end"><span><img src="@/assets/img/fana_il_logo.png" height="20px">Fana IL</span></div>
-                                <div class="col text-center"><span>2 - 1</span></div> <!-- Insert dynamic content {{ data }} - {{ data }} --> 
-                                <div class="col"><span>Tertnes IL<!--<img src="@/assets/img/smoraas_il_logo.png" height="20px">--></span></div>
-                            </div>
-                            <div class="row">
-                                <div class="col text-end"><span><img src="@/assets/img/varegg_il_logo.png" height="20px">Varegg IL</span></div>
-                                <div class="col text-center"><span>-</span></div>
-                                <div class="col"><span>Smørås IL<!--<img src="@/assets/img/smoraas_il_logo.png" height="20px">--></span></div>
+                                <div class="col text-end"><span><img src="@/assets/img/fana_il_logo.png" height="20px">{{ kamp.lag[0].navn }}</span></div>
+                                <div class="col text-center"><span>{{ kamp.stilling[0] + " - " + kamp.stilling[1] }}</span></div> <!-- TODO: Fiks rekkefølge for stilling --> 
+                                <div class="col"><span><img src="@/assets/img/tertnes_il_logo.png" height="20px">{{ kamp.lag[1].navn }}</span></div>
+                                <div><span>{{ kamp.tidGjennstaaende + " min igjen"}}</span></div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+
+                </div>
 					<div class="col-sm-12 col-md-5 col-lg-3 offset-sm-0 offset-md-1 offset-lg-1 order-xs-2 order-sm-2 order-md-2 order-lg-1">
-                <div class="card">
+                <div class="card" v-if="kamperFullforte != null">
                     <div class="card-body">
                         <h4 class="card-title">Fullførte Kamper</h4>
-                        <div>
+                        <div v-for="kamp in kamperFullforte" :key="kamp.kampId">
                             <div class="row" style="margin-bottom: 10px;">
-                                <div class="col text-end"><span><img src="@/assets/img/fana_il_logo.png" height="20px">Fana IL</span></div>
-                                <div class="col-1 text-center"><span>-</span></div>
-                                <div class="col"><span>Tertnes IL<img src="@/assets/img/tertnes_il_logo.png" height="20px"></span></div>
-                            </div>
-                            <div class="row">
-                                <div class="col text-end"><span><img src="@/assets/img/varegg_il_logo.png" height="20px">Varegg IL</span></div>
-                                <div class="col-1 text-center"><span>-</span></div>
-                                <div class="col"><span>Smørås IL<!--<img src="@/assets/img/smoraas_il_logo.png" height="20px">--></span></div>
+                                <div class="col text-end"><span><img src="@/assets/img/fana_il_logo.png" height="20px">{{ kamp.lag[0].navn }}</span></div>
+                                <div class="col text-center"><span>{{ kamp.stilling[0] + " - " + kamp.stilling[1] }}</span></div> <!-- TODO: Fiks rekkefølge for stilling --> 
+                                <div class="col"><span><img src="@/assets/img/tertnes_il_logo.png" height="20px">{{ kamp.lag[1].navn }}</span></div>
+                                <div><span>{{ kamp.tidGjennstaaende + " min igjen"}}</span></div>
                             </div>
                         </div>
                     </div>
@@ -46,51 +39,54 @@
             </div>
             <div class="col-sm-12 col-md-5 col-lg-3 order-xs-3 order-sm-3 order-md-3 order-lg-3">
                 <div class="card">
-                     <div class="card-body">
+                    <div class="card-body">
                         <h4 class="card-title">Kommende Kamper</h4>
-                        <div>
+                        <div v-for="kamp in kamperPaagaaende" :key="kamp.kampId">
                             <div class="row" style="margin-bottom: 10px;">
-                                <div class="col text-end"><span><img src="@/assets/img/fana_il_logo.png" height="20px">Fana IL</span></div>
-                                <div class="col-1 text-center"><span>-</span></div>
-                                <div class="col"><span>Tertnes IL<img src="@/assets/img/tertnes_il_logo.png" height="20px"></span></div>
-                            </div>
-                            <div class="row">
-                                <div class="col text-end"><span><img src="@/assets/img/varegg_il_logo.png" height="20px">Varegg IL</span></div>
-                                <div class="col-1 text-center"><span>-</span></div>
-                                <div class="col"><span>Smørås IL<!--<img src="@/assets/img/smoraas_il_logo.png" height="20px">--></span></div>
+                                <div class="col text-end"><span><img src="@/assets/img/fana_il_logo.png" height="20px">{{ kamp.lag[0].navn }}</span></div>
+                                <div class="col text-center"><span>-</span></div> <!-- TODO: Fiks rekkefølge for stilling --> 
+                                <div class="col"><span><img src="@/assets/img/tertnes_il_logo.png" height="20px">{{ kamp.lag[1].navn }}</span></div>
+                                <div><span>{{ kamp.tidGjennstaaende + " min igjen"}}</span></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div>
-                    <div v-for="turnering in turneringer" :key="turnering.id">
-                        <p>{{ turnering }}</p>
-                    </div>
-            </div>
-            <div><a @click="fetchData()" class="btn btn-primary btn-sm mb-2" role="button">Fetch Data</a></div>
-            <div><a @click="checkData()" class="btn btn-primary btn-sm mb-2" role="button">Check Data</a></div>
         </div>
     </div>
 </template>
 
 <script>
+
 export default {
-  name: 'turneringsComponentDynamic',
+  name: 'cupsComponentDynamic',
   computed: {
-      turneringer() {
-          return this.$store.getters.getTurneringer
+      kamper() {
+          return this.$store.getters.getKamper
+      },
+      kamperPaagaaende() {
+          return this.$store.getters.getKamperPaagaaende
+      },
+      kamperPlanlagt() {
+          return this.$store.getters.getKamperPlanlagt
+      },
+      kamperFullforte() {
+          return this.$store.getters.getKamperFullforte
       }
   },
   methods: {
-      fetchData() {
-          console.log("Fetching...")
-          this.$store.dispatch("fetchTurneringer");
-      },
-      checkData() {
-          console.log(this.$store.getters.getTurneringer)
-      }
-  }
+  },
+  
 }
+</script>
 
+<script setup>
+import { onMounted } from 'vue'
+import { useStore } from 'vuex'
+
+const store = useStore()
+
+onMounted(async() => {
+    await store.dispatch("fetchkamper")
+})
 </script>

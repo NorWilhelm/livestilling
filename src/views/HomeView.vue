@@ -1,19 +1,22 @@
 <template>
     <div>
-      <turnerings-compoent style="margin-bottom: 500px"/>
-      <turnerings-component-dynamic/>
+      <!-- <turnerings-test style="margin-bottom: 800px" /> -->
+      <!-- <turnerings-compoent style="margin-bottom: 500px"/> -->
+       <turnerings-component-dynamic style="margin-bottom: 550px"/>
     </div>
 </template>
 
 <script>
-import TurneringsComponent from '@/components/TurneringsComponent.vue'
+// import TurneringsComponent from '@/components/TurneringsComponent.vue'
 import TurneringsComponentDynamic from '@/components/TurneringsComponentDynamic.vue'
+// import TurneringTest from '@/components/TurneringTest.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    'turnerings-compoent': TurneringsComponent,
+    // 'turnerings-compoent': TurneringsComponent,
     'turnerings-component-dynamic': TurneringsComponentDynamic,
+    //'turnerings-test': TurneringTest,
   }
 }
 </script>
@@ -39,6 +42,7 @@ a {
     bottom: 0px;
     left: 0%;
 }
+
 </style>
 
     TurneringsComponent

@@ -1,5 +1,5 @@
 <template>
-     <div class="col-8 offset-2 text-center" style="margin-bottom: 100px">
+     <div class="col-8 offset-2 text-center" style="margin-bottom: 600px">
         <h1 class="display-6">Logg inn</h1>
         <div class="row">
             <div><input type="email" name="Email" placeholder="Email" style="margin: 0.5rem; width: 250px" inputmode="email" required="" minlength="3"></div>
@@ -16,6 +16,6 @@
 
 <script>
 export default {
-    name: "LoginView"
+    name: "LoginView",
 }
 </script>
