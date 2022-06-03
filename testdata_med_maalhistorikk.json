@@ -1,0 +1,113 @@
+{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa1",
+  "tenantId": "3fa85f64-5717-4562-b3fc-2c963f66afa2",
+  "kamper":
+  [
+    {
+      "kampId": "3fa85f64-5717-4562-b3fc-2c963f66afa3",
+      "status": "PAAGAAENDE",
+      "lag":
+      [
+        {
+          "lagId": "3fa85f64-5717-4562-b3fc-2c963f66afa4",
+          "navn": "Fana IL",
+          "trener": "Egil «Drillo» Olsen"
+        },
+        {
+          "lagId": "3fa85f64-5717-4562-b3fc-2c963f66afa5",
+          "navn": "Tertnes IL",
+          "trener": "Nils Johan Semb"
+        }
+      ],
+      "stilling": [2,1],
+      "MaalHistorikk":
+      [
+        {
+          "MaalId": "3fa85f64-5717-4562-b3fc-2c913f61afa5",
+          "LagSkaarteId": "3fa85f64-5717-4562-b3fc-2c963f66afa5",
+          "Tidspunkt": "2022-05-22T19:18:41+0000",
+          "Stilling": [2,1]
+        }
+      ],
+      "Bane": "Brann Stadion",
+      "LedendeLagId": "3fa85f64-5717-4562-b3fc-2c963f66afa5",
+      "tidStartet": "2022-05-22T19:12:43+0000"
+    },
+    {
+      "kampId": "3fa85f63-5717-4562-b3fc-2c963f66afa3",
+      "status": "PAAGAAENDE",
+      "lag": [
+        {
+          "lagId": "3fa85f62-5717-4562-b3fc-2c963f66afa4",
+          "navn": "Bjarg IL",
+          "trener": "Bjørn Levistruse"
+        },
+        {
+          "lagId": "3fa85f61-5717-4562-b3fc-2c963f66afa5",
+          "navn": "Sandviken IL",
+          "trener": "Nils Johan Semb"
+        }
+      ],
+      "stilling": [2,2],
+      "LedendeLagId": "3fa85f62-5717-4562-b3fc-2c963f66afa4",
+      "tidStartet": "2022-05-22T19:12:43+0000"
+    },
+    {
+      "kampId": "3fa85f64-5717-1562-b3fc-2c963f66afb3",
+      "status": "PLANLAGT",
+      "lag": [
+        {
+          "lagId": "3fa85f64-5717-2562-b3fc-2c963f66afc4",
+          "navn": "Smørås IL",
+          "trener": "Mons Ivertsen"
+        },
+        {
+          "lagId": "3fa85f64-5717-3562-b3fc-2c963f66afd5",
+          "navn": "Fyllingen IL",
+          "trener": "Mona Sydhaug"
+        }
+      ],
+      "stilling": [0,0],
+      "LedendeLagId": null,
+      "tidStartet": "2022-06-22T17:00:00+0000"
+    },
+    {
+      "kampId": "3fa85f64-5727-1562-b3fc-2c963f66afb3",
+      "status": "KANSELERT",
+      "lag": [
+        {
+          "lagId": "3fa85f64-5737-2562-b3fc-2c963f66afc4",
+          "navn": "Smørås IL",
+          "trener": "Lars Vidarsen"
+        },
+        {
+          "lagId": "3fa85f64-5747-3562-b3fc-2c963f66afd5",
+          "navn": "Minde IL",
+          "trener": "Anders Nordhaug"
+        }
+      ],
+      "stilling": [0,0],
+      "LedendeLagId": null,
+      "tidStartet": "2022-06-22T17:00:00+0000"
+    },
+    {
+      "kampId": "3fa85f64-5727-1562-b3fc-2c963566afb3",
+      "status": "FULLFORT",
+      "lag": [
+        {
+          "lagId": "3fa85f64-5737-2562-b3fc-2c913f66afc4",
+          "navn": "Nordpolen IL",
+          "trener": "Nissen"
+        },
+        {
+          "lagId": "3fa85f64-5747-3562-b3fc-2c963b66afd5",
+          "navn": "Minde IL",
+          "trener": "Anders Nordhaug"
+        }
+      ],
+      "stilling": [0,3],
+      "LedendeLagId": "3fa85f64-5737-2562-b3fc-2c913f66afc4",
+      "tidStartet": "2022-06-22T17:00:00+0000"
+    }
+  ]
+}

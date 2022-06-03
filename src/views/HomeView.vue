@@ -1,27 +1,20 @@
 <template>
     <div>
-      <!-- <turnerings-test style="margin-bottom: 800px" /> -->
-      <!-- <turnerings-compoent style="margin-bottom: 500px"/> -->
-       <turnerings-component-dynamic style="margin-bottom: 550px"/>
+       <cup-component style="margin-bottom: 550px"/>
     </div>
 </template>
 
 <script>
-// import TurneringsComponent from '@/components/TurneringsComponent.vue'
-import TurneringsComponentDynamic from '@/components/TurneringsComponentDynamic.vue'
-// import TurneringTest from '@/components/TurneringTest.vue'
+import cupComponent from '@/components/cupComponent.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    // 'turnerings-compoent': TurneringsComponent,
-    'turnerings-component-dynamic': TurneringsComponentDynamic,
-    //'turnerings-test': TurneringTest,
+    'cup-component': cupComponent,
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
   margin: 40px 0 0;
@@ -44,5 +37,3 @@ a {
 }
 
 </style>
-
-    TurneringsComponent

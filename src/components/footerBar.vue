@@ -3,20 +3,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-md-3 item">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="#">Web design</a></li>
-                        <li><a href="#">Development</a></li>
-                        <li><a href="#">Hosting</a></li>
-                    </ul><img src="@/assets/img/hvl_logo.svg" height="42px" style="margin-top: 3rem;">
+                    <img src="@/assets/img/hvl_logo.svg" height="42px" style="margin-top: 3rem;">
                 </div>
                 <div class="col-sm-6 col-md-3 item">
-                    <h3>About</h3>
-                    <ul>
-                        <li><a href="#">Company</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Careers</a></li>
-                    </ul><img src="@/assets/img/livestilling_logo_hvit.svg" height="42px" style="margin-top: 3rem;">
+<img src="@/assets/img/livestilling_logo_hvit.svg" height="42px" style="margin-top: 3rem;">
                 </div>
                 <div class="col-md-6 item text">
                     <h3>LiveStilling</h3>
